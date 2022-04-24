@@ -1,5 +1,4 @@
-from django import path
+from django.urls import path
 from . import views
-from personal_folio_project import portfolio
 
-app_name = portfolio
+# app_name = 'portfolio'
