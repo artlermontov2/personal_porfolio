@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+  <h1>Это моё портфолио</h1>
+  {% for i in projects %}
+  <h2>{{ i.title }}</h2>
+  <p>{{ i.description }}</p>
+  <img src="{{ i.image.url }}">
+  {% if i.url %}
+  <br><a href="{{ i.url }}">Link</a>
+  {% endif %}
+  {% endfor %}
+</html>
