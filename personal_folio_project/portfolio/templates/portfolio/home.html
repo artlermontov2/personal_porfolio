@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
   <h1>Это моё портфолио</h1>
+  {% load static %} <!-- Загружаем метод -->
+  <a href="{% static 'portfolio/resume.pdf' %}">Resume</a>
+  <img src="{% static 'portfolio/myphoto.jpg' %}"> <!-- указваем откуда будет загружаться ыото, и статические медиа файлы приложение/static/приложение -->
   {% for i in projects %}
   <h2>{{ i.title }}</h2>
   <p>{{ i.description }}</p>

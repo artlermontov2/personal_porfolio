@@ -6,7 +6,7 @@
   {% for blog in blogs %}
 
   <h2>
-    {{ blog.title }}
+    <a href="{% url 'blog:detail' blog.id %}">{{ blog.title }}</a>
   </h2>
   <h5>
     {{ blog.date }}
