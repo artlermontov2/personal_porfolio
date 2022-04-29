@@ -1,1 +1,11 @@
-{{ blog.title }}
+{% extends 'portfolio/base.html' %}
+{% block content %}
+
+<h1 class="text-center mt-5" id="blogdetailtitle">{{ blog.title }}</h1>
+<h5 class="text-center text-muted mb-5">--{{ blog.date|date:'M d Y' }} {{ blog.date|time:'G:i' }}--</h5>
+<p class="text-center text-muted mb-5">{{ blog.description|safe }}</p>
+ <!--safe позволяет обрабатывать html теги, добавленные к тесту при создании 
+
+{% endblock %}
+
+

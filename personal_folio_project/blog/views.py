@@ -8,5 +8,5 @@ def all_blogs(request):
     return render(request, 'blog/all_blogs.html', {'blogs': blogs})
 
 def detail(request, blog_id):
-    blog = get_object_or_404(Blogs, pk=blog_id)  # Пытается найти объект под нужным номером, и если не находит, но выбаст ошибку 404
+    blog = get_object_or_404(Blogs, pk=blog_id)  # Пытается найти объект под нужным номером, и если не находит, но выдаст ошибку 404
     return render(request, 'blog/detail.html', {'blog': blog})
